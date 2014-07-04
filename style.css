@@ -9,20 +9,29 @@ and open the template in the editor.
 */
 
 html{
-    height: 100%;
     width: 100%;
 }
 body{
     margin: 0 auto;
-    background-image: url(falasarna.jpg);
+    transition: opacity 1s ease-in-out;
     background-repeat: no-repeat;
     background-size: cover;
+    animation:mymove 25s infinite;
+    -webkit-animation:mymove 25s infinite; /* Safari and Chrome */
+
+
+    /*
+    
+    
+    background-position: center;
+    transition-property: background;
+    transition-duration: 1s;*/
 }
 #header{
     font-family: 'Roboto Condensed', sans-serif;
     width:100%;
     background-color: #ecf0f1;
-    
+    margin-bottom: 20px;
 
 }
 #header #menu{
@@ -48,4 +57,36 @@ h1{
 #logo{
     display: block;
     padding: 50px 0 0 0;
+}
+
+#box{
+    border-radius: 10px;
+    display: inline-block;
+    height: 225px;
+    min-width:225px;
+    background:  gray 0 0;
+    filter: alpha(opacity=30);  
+    -moz-opacity: 0.3;  
+    -khtml-opacity: 0.3;  
+    opacity: 0.3;
+    margin:20px;
+}
+
+
+@keyframes mymove
+{
+    0%   { background:#2980b9;}
+    25%  { background:#16a085;}
+    50%  { background:#27ae60;}
+    75%  { background:#e74c3c;}
+    100% { background:#2980b9;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+    0%   { background:#2980b9;}
+    25%  { background:#16a085;}
+    50%  { background:#27ae60;}
+    75%  { background:#e74c3c;}
+    100% { background:#2980b9;}
 }
