@@ -32,6 +32,7 @@ body{
     width:100%;
     background-color: #ecf0f1;
     margin-bottom: 20px;
+    box-shadow:0px 7px 24px 0px rgba(50, 50, 50, 0.56);
 
 }
 #header #menu{
@@ -60,6 +61,7 @@ h1{
 }
 .flex-container{
     display: flex; /* or inline-flex */
+    display: -ms-flexbox;
     justify-content: space-around;
     flex-flow: row wrap;
     list-style-type: none;
@@ -67,8 +69,10 @@ h1{
 }
 .flex-item{
     display:flex;
+
     flex-direction: column;
-    /*height: 250px;*/
+    display: -ms-flexbox;
+    max-height: 350px;
     width:225px;
     background:  white;
     margin: 10px;
@@ -78,7 +82,7 @@ h1{
 
 .flex-item img{
     width:100%;
-
+    max-height: 200px;
 }
 .flex-item p{
     margin:auto;
