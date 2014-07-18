@@ -34,9 +34,9 @@ body{
     background-color: #ecf0f1;
     margin-bottom: 20px;
     box-shadow:0px 7px 24px 0px rgba(50, 50, 50, 0.56);
-/*    position: fixed;
-    z-index: 1;*/
-    
+    /*    position: fixed;
+        z-index: 1;*/
+
 
 }
 #header #menu{
@@ -74,7 +74,7 @@ h1{
 }
 .flex-item{
     display:flex;
-    
+
     flex-direction: column;
     display: -ms-flexbox;
     max-height: 350px;
@@ -104,7 +104,7 @@ h1{
 .event-container{
     padding:0;
     background-color: hsla(50,96%,100%, 0.3);
-    
+
 }
 .event-container h1{
     text-align: center;
@@ -115,7 +115,7 @@ h1{
 .event-container .flex-item{
     padding:0;
     width: auto;
-    
+
 }
 #older_posts{
     font-size: 2em;
@@ -123,16 +123,35 @@ h1{
 
 /*ARTICLE START*/
 .article{
+    font-family: 'Roboto', sans-serif;
     background-color: aliceblue;
+    max-width: 1170px;
+    margin:0 auto;
+
+}
+.title{
+    text-align: center;
+    font-size: 2.5em;
+    margin-top:40px;
 }
 .article-image{
-    width: 100%;
+    display: block;
+    width:100%;
+    min-height: 400px;
+    background-position: center;
+    background-color: activeborder;
+    background-image: url(4.jpg);
 }
-.article-image img{
-    max-width: 100%;
-    max-height: 400px;
-    margin: 0 auto;
+
+.article-content{
+    font-size: 1.5em;
+    font-weight: 400;
+    padding: 40px;
+    letter-spacing: -1px;
+    //text-align: left;
 }
+//ARTICLE TITLE
+
 ::-webkit-scrollbar {
     width: 8px;
 
