@@ -8,6 +8,10 @@ and open the template in the editor.
     Author     : Giannis
 */
 
+#header{
+    transition-property: opacity;
+    transition-duration: 2s;
+}
 html{
     width: 100%;
 }
@@ -19,15 +23,6 @@ body{
     background-size: cover;
     animation:mymove 60s infinite;
     -webkit-animation:mymove 60s infinite; /* Safari and Chrome */
-
-
-
-    /*
-    
-    
-    background-position: center;
-    transition-property: background;
-    transition-duration: 1s;*/
 }
 #header{
     font-family: 'Roboto Condensed', sans-serif;
@@ -53,6 +48,7 @@ body{
 #header #menu ul{
     float:right;
     margin-top: 5px;
+    padding-top: 80px;
 }
 #header #menu li{
     list-style: none;
@@ -61,18 +57,23 @@ body{
     font-size: 2em;
     padding: 5px;
     font-weight: 400;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    
+    -webkit-transition: all 1.3s;
+    -moz-transition: all 1.3s;
+    -ms-transition: all 1.3s;
+    -o-transition: all 1.3s;
+    transition: all 1.3s;
 }
 #header #menu li a{
     text-decoration: none;
+    transition: color linear 0.15s;
     color:#000;
+    
 }
 #header #menu li a:hover{
     color: rgb(227, 68, 68);
+    transition-duration: 0.15s;
+    
     //border-bottom: 2px dashed #ccc;
 }
 /*pushes content down*/
@@ -85,7 +86,8 @@ h1{
 }
 #logo{
     display: block;
-    padding: 50px 0 0 0;
+    padding:50px 0 64px 0;
+    float: left;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -95,15 +97,27 @@ h1{
 /*FOR TRANSITION*/
 #header.smaller {
     height: 75px;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
 }
-#header.smaller h1#logo {
-    width: 150px;
+#header.smaller #logo {
     height: 75px;
-    line-height: 75px;
-    font-size: 30px;
+    padding-top: 20px;
+
+}
+#header.smaller #logo h1{
+    font-size: 2em;
+}
+#header.smaller #menu ul {
+    padding-top:10px;
+
 }
 #header.smaller #menu li {
-    line-height: 75px;
+    font-size: 1.75em;
+
 }
 /*END HEADER*/
 .flex-container{
@@ -144,6 +158,7 @@ h1{
 }
 .flex-item:hover{
     background-color: white;
+    
 }
 .event-container{
     padding:0;
@@ -165,15 +180,33 @@ h1{
     font-size: 2em;
 
 }
+/*MENUBAR START*/
+.menubar{
+    //max-width: 20%;
+    position:fixed;
+    left:0;
+    top:155px;
+    height:600px;
+    background-color:#ecf0f1;
+    z-index: 999;
+    //float: next;
+}
+.menubar.push_up{
+    top:76px;
 
+}
+/*MENUBAR END*/
 /*ARTICLE START*/
+.article-container{
+    margin: 0 auto;
+}
 .article{
     font-family: 'Roboto', sans-serif;
     background-color: aliceblue;
-    max-width: 940px;
-    margin:0 auto;
+    margin:0 20% auto;
     box-shadow:0px 7px 24px 0px rgba(50, 50, 50, 0.56);
-
+    max-width: 940px;
+    //float:next;
 
 }
 .title{
@@ -191,7 +224,7 @@ h1{
     min-height: 400px;
     background-position: center;
     background-color: activeborder;
-    
+
 }
 
 .article-content{
@@ -219,7 +252,7 @@ h1{
     margin-top: 25px;
     background-color: activeborder;
     box-shadow:0px 7px 24px 0px rgba(50, 50, 50, 0.56);
-
+    display:none;
 
 }
 /*FOOTER END*/

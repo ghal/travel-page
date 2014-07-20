@@ -21,15 +21,18 @@ $(document).ready(function() {
 
 //SCROLL RESIZE MENU
 function init() {
-    window.addEventListener('scroll', function(e){
+    window.addEventListener('scroll', function(e) {
         var distanceY = window.pageYOffset || document.documentElement.scrollTop,
-            shrinkOn = 300,
-            header = document.querySelector("#header");
+                shrinkOn = 300;
+        var header = document.querySelector("#header");
+        var left_sidebar = document.querySelector(".menubar");
         if (distanceY > shrinkOn) {
-            classie.add(header,"smaller");
+            classie.add(header, "smaller");
+            classie.add(left_sidebar, "push_up");
         } else {
-            if (classie.has(header,"smaller")) {
-                classie.remove(header,"smaller");
+            if (classie.has(header, "smaller") && classie.has(left_sidebar, "push_up")) {
+                classie.remove(header, "smaller");
+                classie.remove(left_sidebar, "push_up");
             }
         }
     });
